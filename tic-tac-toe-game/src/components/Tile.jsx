@@ -1,22 +1,41 @@
 import React from "react"
+import React from 'react'
+import { useState } from 'react';
+import Square from "./Square";
+
+
+/*onst Square = () => {
+  const [value, setValue] = useState(null);
+  function handleTileClick(){
+    setValue("X")
+  }
+  return (
+    <div>
+      <button className="tile" onClick={handleTileClick}>{value}</button>
+      
+    </div>
+  )
+}*/
+
+
+
 
 export default function Tile() {
 
-  function handleTileClick() {
-    // You guys will tell me what do here i don't know 
-  }
   
   return (
     <main className="board">
-      <div className="tile" onClick={handleTileClick}></div>
-      <div className="tile" onClick={handleTileClick}></div>
-      <div className="tile" onClick={handleTileClick}></div>
-      <div className="tile" onClick={handleTileClick}></div>
-      <div className="tile" onClick={handleTileClick}></div>
-      <div className="tile" onClick={handleTileClick}></div>
-      <div className="tile" onClick={handleTileClick}></div>
-      <div className="tile" onClick={handleTileClick}></div>
-      <div className="tile" onClick={handleTileClick}></div>
+      
+        <Square/>
+        <Square/>
+        <Square/>
+        <Square/>
+        <Square/>
+        <Square/>
+        <Square/>
+        <Square/>
+        <Square/>
+      
     </main>
   )
 }
