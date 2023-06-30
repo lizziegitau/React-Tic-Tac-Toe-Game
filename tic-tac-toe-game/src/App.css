@@ -145,7 +145,6 @@ footer {
   color: white;
   margin: auto;
 }
-
 #announcer {
   color: aqua;
   font-size: 40px;
@@ -167,6 +166,16 @@ footer {
   color: rgb(13, 13, 233);
   font-size: 1.2em;
 
+}
+.reset{
+  background: rgba(162, 7, 144, 0.396);
+  color: bisque;
+  padding: 10px;
+  border: 8px solid aqua;
+  border-radius: 10px;
+  margin-left: 1em;
+  font-size: 1.5em;
+  align-items: center;
 }
 
 
