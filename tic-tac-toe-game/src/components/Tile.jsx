@@ -1,6 +1,5 @@
 import React from "react"
 
-
 export default function Tile(handleClick){
   return(
     <section className="container">

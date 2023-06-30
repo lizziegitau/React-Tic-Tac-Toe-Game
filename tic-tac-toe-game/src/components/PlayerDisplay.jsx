@@ -1,6 +1,5 @@
 import React from "react"
 
-
 export default function PlayerDisplay(){
   return(
     <div>
@@ -12,4 +11,5 @@ export default function PlayerDisplay(){
           </section>
     </div>
   )
+
 }

@@ -1,6 +1,5 @@
 import React from "react"
 
-
 export default function ResetButton(getBoard){
 
       
@@ -22,3 +21,4 @@ export default function ResetButton(getBoard){
 
  
  }
+ 

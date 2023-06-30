@@ -1,9 +1,10 @@
 import React from "react"
 import Tile from "./components/Tile"
-import Announcer from "./components/Announcer"
 import ResetButton from "./components/ResetButton"
 import PlayerDisplay from "./components/PlayerDisplay"
+import Announcer from "./components/Announcer"
 import "./App.css"
+
 
 export default function App() {
   let [board,setBoard] = React.useState(['', '', '', '', '', '', '', '', ''])
@@ -91,6 +92,7 @@ export default function App() {
   return (
     <div>
       <PlayerDisplay />
+    
       <Announcer />
       <Tile handleClick={userAction} />
       <ResetButton 
