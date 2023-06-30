@@ -1,10 +1,20 @@
 import React from "react"
 
-export default function Announcer() {
-    return (
-        <div className="announcer">
-            <h3>PLAYER X WON! 🏁</h3>
-            <h4>IT'S TIE! 🙂</h4>
-        </div>
-    )
+export default function Announcer(){  
+  const announce = (type) => {
+    switch(type){
+        case PLAYERO_WON:
+            return 'Player <span class="playerO">O</span> Won 🏁';
+            break;
+        case PLAYERX_WON:
+            return  'Player <span class="playerX">X</span> Won 🏁';
+            break;
+        case TIE:
+            return 'Tie 🙂';
+    }
+    announcer.classList.remove('hide');
+}
+      return (
+        <section id="announcer"></section>
+      )
 }

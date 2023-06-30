@@ -48,10 +48,9 @@ body {
   color: #000;
 }
 
-.announcer {
-  margin-top: 20px;
-  font-size: 24px;
-  font-weight: bold;
+#announcer {
+  color: aqua;
+  font-size: 40px;
 }
 
 .reset-button {
@@ -67,6 +66,16 @@ body {
   padding: 10px;
   border: 8px solid aqua;
   border-radius: 10px;
+}
+.reset{
+  background: rgba(162, 7, 144, 0.396);
+  color: bisque;
+  padding: 10px;
+  border: 8px solid aqua;
+  border-radius: 10px;
+  margin-left: 1em;
+  font-size: 1.5em;
+  align-items: center;
 }
 
 .reset-button button:hover {

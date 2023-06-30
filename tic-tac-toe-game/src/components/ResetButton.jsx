@@ -1,23 +1,24 @@
 import React from "react"
 
-export default function ResetButton() {
+export default function ResetButton(getBoard){
 
-    const [board, setBoard] = React.useState(generateEmptyBoard())
+      
+  return (
+    <div>
+       <section className="controls">
+            <br/>
+            <br/>
+            <button id="reset" onClick={getBoard}>PLAY AGAIN</button>
+            <button>
+              <a href="about.html" className="help">
+                Help
+              </a>
+            </button>
+        </section>
 
-    const handleReset = () => {
-        setBoard(generateEmptyBoard())
-        setCurrentPlayer("X")
-        setWinner(null)
-      }
+    </div>
+  )
 
-    function generateEmptyBoard() {
-        return Array(3).fill(null).map(() => Array(3).fill(null))
-      }
-
-    return (
-        <div className="reset-button">
-            <button onClick={handleReset}>PLAY AGAIN</button>
-            
-        </div>
-    )
-}
+ 
+ }
+ 
