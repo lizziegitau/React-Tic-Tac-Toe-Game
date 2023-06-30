@@ -1,8 +1,8 @@
 import React from "react"
 import Tile from "./components/Tile"
-import Announcer from "./components/Announcer"
 import ResetButton from "./components/ResetButton"
 import PlayerDisplay from "./components/PlayerDisplay"
+import Announcer from "./components/Announcer"
 import "./App.css"
 
 export default function App() {
@@ -75,12 +75,6 @@ export default function App() {
           board[index,tile] = currentPlayer;
       }
 
-        const changePlayer = () => {
-          playerDisplay.classList.remove(`player${currentPlayer}`);
-          currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-          playerDisplay.innerText = currentPlayer;
-          playerDisplay.classList.add(`player${currentPlayer}`);
-        }
         const resetBoard = () => {
               setBoard ( ['', '', '', '', '', '', '', '', ''])
               setIsGameActive(true)
@@ -95,8 +89,6 @@ export default function App() {
       <PlayerDisplay />
       <Announcer />
       <Tile handleClick={userAction} />
-      <ResetButton 
-          getBoard={resetBoard}
-      />
+      
     </div>
   )
