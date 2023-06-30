@@ -1,48 +1,58 @@
-import React from "react";
+import React from "react"
 
-const Announcer = ({ winner, currentPlayer, gameOver, handleReset }) => {
-    const winningCombinations = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
-        [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
-        [0, 4, 8], [2, 4, 6] // Diagonals
-      ];
+export default function Announcer({cells}) {
 
-      const checkForWinner = () => {
-        for (let combination of winningCombinations) {
-          const [a, b, c] = combination;
-          if (
-            squares[a] &&
-            squares[a] === squares[b] &&
-            squares[a] === squares[c]
-          ) {
-            return squares[a];
-          }
+    const [winner,setWinner] = React.useState(null)
+
+    const winningConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+      ]
+
+      React.useEffect(() => {
+        const winner = checkWinner(cells)
+        setWinner(winner)
+      }, [cells])
+
+      function checkWinner(cells) {
+        if (cells.every(cell => cell === "")) {
+            return null
         }
-        return null;
-      };
-  if (gameOver) {
-    if (winner) {
-      return (
-        <div className="announcer">
-          <h2>{`Player ${winner} Wins!`}</h2>
-          <button onClick={handleReset}>Reset</button>
-        </div>
-      );
-    } else {
-      return (
-        <div className="announcer">
-          <h2>It's a draw!</h2>
-          <button onClick={handleReset}>Reset</button>
-        </div>
-      );
-    }
-  }
+        for(let i = 0; i < winningConditions.length; i++) {
+            const [a, b, c] = winningConditions[i]
+            if(
+                cells[a] &&
+                cells[a] === cells[b] &&
+                cells[a] === cells[c]
+            ) {
+                return cells[a]
+            }
+        }
 
-  return (
-    <div className="announcer">
-      <h2>{`Player ${currentPlayer}'s Turn`}</h2>
-    </div>
-  );
-};
+        if (cells.every(cell => cell !== "")) {
+            return "Draw"
+        }
+        return null
+      }
 
-export default Announcer;
+      return (
+        <div className="game-result">
+            {winner === "Draw" ? (
+                <div>
+                    <p>It's a Tie </p>
+                </div>
+            ) : (
+                <div>
+                    <p>Player {winner} wins</p>
+                </div>
+            )}
+        </div>
+      )
+
+}
