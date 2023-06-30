@@ -1,4 +1,4 @@
-import React from "react"
+
 import React from 'react'
 import { useState } from 'react';
 /*import Square from "./Square";
@@ -20,7 +20,7 @@ import { useState } from 'react';
 
 
 
-/*export default function Tile() {
+function Tile() {
 
   
   return (
@@ -38,4 +38,5 @@ import { useState } from 'react';
       
     </main>
   )
-}*/
+}
+export default Tile

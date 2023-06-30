@@ -3,20 +3,20 @@ import { useState } from "react"
 
 
 export default function PlayerDisplay() {
-    const [turn,setTurn] = useState("x");
-    const [cells,setCells] = useState[Array(9).fill('')];
-    function handleTileClick(){
+    const [turn,setTurn] = useState("X");
+    const [cells,setCells] = useState(Array(9).fill(''));
+    function handleTileClick(num){
         if (cells[num] !== ''){
             alert("already clicked");
             return;
         }
         let squares = [...cells];
-        if (turn === "x"){
+        if (turn === "X"){
             squares[num]= "X";
-            setTurn("0");
+            setTurn("O");
         }else{
             squares[num]="O";
-            setTurn("x");
+            setTurn("X");
         }
         setCells(squares);
     };
