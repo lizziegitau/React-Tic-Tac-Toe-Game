@@ -1,10 +1,9 @@
-
 import React from 'react'
 import { useState } from 'react';
 /*import Square from "./Square";
 
 
-/*onst Square = () => {
+/*const Square = () => {
   const [value, setValue] = useState(null);
   function handleTileClick(){
     setValue("X")

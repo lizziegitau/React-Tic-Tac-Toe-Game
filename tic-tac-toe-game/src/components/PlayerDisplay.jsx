@@ -1,10 +1,8 @@
 import React from "react"
-import { useState } from "react"
-
 
 export default function PlayerDisplay() {
-    const [turn,setTurn] = useState("X");
-    const [cells,setCells] = useState(Array(9).fill(''));
+    const [turn,setTurn] = React.useState("X");
+    const [cells,setCells] = React.useState(Array(9).fill(''));
     function handleTileClick(num){
         if (cells[num] !== ''){
             alert("already clicked");
@@ -23,10 +21,6 @@ export default function PlayerDisplay() {
      const Square = ({num}) => {
         return <button className="tile" onClick={() =>handleTileClick(num)}>{cells[num]}</button>;
     };
-          
-        
-      
-    
     
     return (
         <div className="player-display">
@@ -41,12 +35,9 @@ export default function PlayerDisplay() {
             <Square num={6}/>
             <Square num={7}/>
             <Square num={8}/>
-       
 
             </main>
-            
-            
-            
+           
         </div>
     )
 }
