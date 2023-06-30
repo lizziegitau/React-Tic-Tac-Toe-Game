@@ -1,7 +1,7 @@
 import React from "react"
 import React from 'react'
 import { useState } from 'react';
-import Square from "./Square";
+/*import Square from "./Square";
 
 
 /*onst Square = () => {
@@ -20,7 +20,7 @@ import Square from "./Square";
 
 
 
-export default function Tile() {
+/*export default function Tile() {
 
   
   return (
@@ -38,4 +38,4 @@ export default function Tile() {
       
     </main>
   )
-}
+}*/

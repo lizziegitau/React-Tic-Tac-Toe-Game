@@ -12,7 +12,7 @@ export default function App() {
     <div className="app">
       <h1>Tic-Tac-Toe Game</h1>
       <PlayerDisplay />
-      <Tile />
+    
       <Announcer />
       <ResetButton />
     </div>
