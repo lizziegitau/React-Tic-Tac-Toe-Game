@@ -21,8 +21,15 @@ export default function PlayerDisplay() {
      const Square = ({num}) => {
         return <button className="tile" onClick={() =>handleTileClick(num)}>{cells[num]}</button>;
     };
+    function getBoard(params) {
+        setCells(Array(9).fill(''))
+        setTurn("X")
+        handleTileClick(num)
+    }
+   
     
     return (
+        <div>
         <div className="player-display">
             <h2 className="current-player">Current Player:{turn}</h2>
             <main className="board">
@@ -39,5 +46,22 @@ export default function PlayerDisplay() {
             </main>
            
         </div>
+        <div>
+        <section className="controls">
+             <br/>
+             <br/>
+             <button id="reset" onClick={getBoard}>PLAY AGAIN</button>
+             <button>
+               <a href="about.html" className="help">
+                 Help
+               </a>
+             </button>
+         </section>
+ 
+     </div>
+     </div>
     )
+  
+       
+       
 }
