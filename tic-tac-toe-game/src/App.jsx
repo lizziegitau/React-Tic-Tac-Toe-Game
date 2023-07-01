@@ -6,7 +6,7 @@ import PlayerDisplay from "./components/PlayerDisplay"
 import "./App.css"
 
 export default function App() {
-  let [board,setBoard] = React.useState(['', '', '', '', '', '', '', '', ''])
+  let [board,setBoard] = React.useState(Array(9).fill(null))
   const [isGameActive,setIsGameActive] = (true)
   let currentPlayer = 'X';
   
@@ -53,12 +53,14 @@ export default function App() {
             announce(TIE);
     }
         const userAction = (tile, index) => {
-          if(isValidAction(tile) && isGameActive) {
-              tile.innerText = currentPlayer;
-              tile.classList.add(`player${currentPlayer}`);
-              setBoard(updateBoard);
-              handleResultValidation();
-              changePlayer();
+
+          
+          // if(isValidAction(tile) && isGameActive) {
+          //     tile.innerText = currentPlayer;
+          //     tile.classList.add(`player${currentPlayer}`);
+          //     setBoard(updateBoard);
+          //     handleResultValidation();
+          //     changePlayer();
           }
         }
         const isValidAction = (tile) => {
@@ -98,4 +100,3 @@ export default function App() {
       />
     </div>
   )
-}
